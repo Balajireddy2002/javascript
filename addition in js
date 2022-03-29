@@ -1,0 +1,27 @@
+<html>
+<body>
+<script>
+let a=582;
+function f()
+{
+let name="balaji";
+document.writeln("roll no="+a+"<br>");
+document.writeln("name ="+name+"<br>");
+let op = prompt("is the student studting");
+if(op==1){
+  document.writeln(name    +" is studying in aditya college");
+}
+else
+{
+   document.writeln(name    +" is working as a software engineer");
+}
+}
+f();
+/*console.log(a);
+a=20;
+document.writeln("outside block a="+a+"<br>");*/
+window.alert("warning");
+//window.confirm("click yes to submit");
+</script>
+</body>
+</html>
