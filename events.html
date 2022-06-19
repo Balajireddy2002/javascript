@@ -1,0 +1,76 @@
+<html>
+    <body>
+        <center>
+        ENTER A NUMBER  <input id="number">
+        <BR><BR><BR>
+        <button onclick="factorial()">factoreial</button>
+        <button onclick="fibonnaci()">fibonnaci</button>
+        <button onclick="palindrome()">palindrome</button>
+        <button onclick="prime()">prime</button>
+        <BR><BR><BR>
+        <script>
+            function factorial(){
+                
+                var  num=document.getElementById("number").value;
+                var sum=1;
+                for(var i=1;i<=num;i++){
+                    sum=sum*i;
+                }
+               document.getElementById("fact").innerHTML=sum;
+            }
+            function fibonnaci(){
+                var  num=document.getElementById("number").value;
+                var a=0,b=1;
+                var s=a+b;
+                var c=0;
+                while(s<=num){
+                    c=c+s
+                    a=b;
+                    b=s;
+                    s=a+b;
+                }
+                document.getElementById("fib").innerHTML=c;
+            }
+            function palindrome(){
+                var  num=document.getElementById("number").value;
+                var temp=num;
+                var sum=0;
+                while(temp!=0){
+                    var r=temp%10;
+                    sum=sum*10+r;
+                    temp=parseInt(temp/10);
+                }
+                if(sum==num){
+                    document.getElementById("palin").innerHTML="palindeome";
+                }
+                else{
+                    document.getElementById("palin").innerHTML=" not palindeome";
+                }
+    
+            }
+            function prime(){
+                var  num=document.getElementById("number").value;
+                var i=2;
+                
+                    var count=0;
+                    for(var j=1;j<=num;j++){
+                        if(num%j==0){
+                            count++;
+                        }
+                    }
+                    if(count==2){
+                        document.getElementById("primes").innerHTML=" prime";
+                    }
+                    else{
+                        document.getElementById("primes").innerHTML=" not prime";
+                    }
+            
+            }
+        </script>
+        <textarea id="fact" cols="4" rows="2"></textarea>
+        <textarea id="fib" cols="4" rows="2"></textarea>
+        <textarea id="palin" cols="4" rows="2"></textarea>
+        <textarea id="primes" cols="4" rows="2"></textarea>
+       </center>
+    </body>
+</html>
